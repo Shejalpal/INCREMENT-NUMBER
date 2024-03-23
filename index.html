@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NUMBER INCREMENT</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>hello world</h1>
+    <div class="container">
+        <input type="number" id="numberInput" value="0" readonly>
+        <button onclick="increment(1)">+1</button>
+        <button onclick="increment(-1)">-1</button>
+        <button onclick="increment(10)">+10</button>
+        <button onclick="increment(-10)">-10</button>
+    </div>
+
+    <script>
+        function increment(value) {
+            const numberInput = document.getElementById('numberInput');
+            let currentValue = parseInt(numberInput.value);
+            currentValue += value;
+            numberInput.value = currentValue;
+        }
+    </script>
+    
 </body>
 </html>
